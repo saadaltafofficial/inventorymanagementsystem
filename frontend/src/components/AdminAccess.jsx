@@ -60,11 +60,11 @@ const AdminAccess = () => {
     return (
         <>
             <Header />
-            <main className='flex flex-col justify-center items-center h-screen px-2 py-6 bg-[#f3f5f8] mt-16'>
-                <section className=' border w-full rounded-[1rem] bg-white px-3 py-4'>
+            <main className='flex flex-col justify-center items-center h-screen px-2 pt-4 pb-3 bg-[#f3f5f8] mt-16'>
+                <section className='border w-full rounded-[1rem] bg-white px-3 py-4'>
                     <h1 className='font-semibold text-xl text-gray-800 mb-2'>Search Item</h1>
                     <form onSubmit={handleSearchFilter} className='grid tablet:grid-cols-2 gap-3'>
-                        <select name="search" id="" value={formData.value} onChange={handleChange} className='"w-full rounded-md bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer'>
+                        <select name="search" id="" value={formData.value} onChange={handleChange} className='"w-full rounded-md bg-transparent text-gray-800 text-sm border pl-3 pr-8 py-2 transition duration-300 ease outline-gray-300 shadow-sm focus:shadow-md appearance-none cursor-pointer'>
                             <option value="allitems">All items</option>
                             <option value="devTeam">Dev Team</option>
                             <option value="creativeTeam">Creative Team</option>
@@ -76,7 +76,7 @@ const AdminAccess = () => {
                         <button type='submit' className='bg-gray-800 w-full py-3 rounded-md text-white'>Search</button>
                     </form>
                 </section>
-                <section className="flex flex-col justify-start items-center h-full my-2 border w-full rounded-[1rem] bg-white ">
+                <section className="flex flex-col justify-start items-center h-full mt-2 border w-full rounded-[1rem] bg-white ">
                     {items.length > 0 ?
                         <table className="text-center w-full">
                             <thead>

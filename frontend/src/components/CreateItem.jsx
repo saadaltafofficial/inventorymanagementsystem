@@ -58,15 +58,15 @@ const CreateItem = () => {
   return (
     <>
     <Header />
-    <section className='px-8 my-10 text-gray-800 flex flex-col items-center justify-center mt-28'>
-        <div className='max-w-[600px] w-full'>
+    <section className='px-4 text-gray-800 flex flex-col items-center justify-start mt-16 h-screen bg-[#f3f5f8]'>
+        <div className='max-w-[600px] w-full border p-4 mt-6 rounded-[1rem] bg-white'>
         <h1 className='font-bold text-2xl tracking-wide mb-4'>Create Item</h1>
         <form onSubmit={handleSubmit}  className='flex flex-col gap-3'>
             <label>Name
-            <input type="text" required name="name" value={form.name} onChange={handleChange} className='block border p-2 rounded-md w-full'/>
+            <input type="text" required name="name" placeholder='Enter name' value={form.name} onChange={handleChange} className='block border p-2 rounded-md w-full outline-gray-300'/>
             </label>
             <label>Team
-            <select name="team" required value={form.team}  onChange={handleChange} className='block border p-2 rounded-md w-full'>
+            <select name="team" required value={form.team}  onChange={handleChange} className='block border p-2 rounded-md w-ful outline-gray-300'>
                 <option value="">select team</option>
                 <option value="devTeam">Dev Team</option>
                 <option value="creativeTeam">Creative Team</option>
@@ -74,7 +74,7 @@ const CreateItem = () => {
             </select>
             </label>
             <label>Item
-            <select name="item" value={form.item} required onChange={handleChange} className='block border p-2 rounded-md w-full'>
+            <select name="item" value={form.item} required onChange={handleChange} className='block border p-2 rounded-md w-full outline-gray-300'>
                 <option value="">select iteam</option>
                 <option value="LCD">LCD</option>
                 <option value="CPU">CPU</option>
@@ -82,7 +82,7 @@ const CreateItem = () => {
             </select>
             </label>
             <label>Status
-            <select name="status" value={form.status} onChange={handleChange} className='block border p-2 rounded-md w-full'>
+            <select name="status" value={form.status} onChange={handleChange} className='block border p-2 rounded-md w-full outline-gray-300'>
                 <option value="">select status</option>
                 <option value="unassigned">unassigned</option>
                 <option value="assigned">assigned</option>
@@ -91,10 +91,10 @@ const CreateItem = () => {
             </label>
             <label>
                 Description
-            <textarea name="description" value={form.description} onChange={handleChange} className='mb-4 block border p-2 rounded-md w-full'>
+            <textarea name="description" value={form.description} onChange={handleChange} placeholder='Enter description' className='mb-4 h-32 block border p-2 rounded-md w-full resize-none outline-gray-300'>
             </textarea>           
             </label>
-            <button type='submit' className='bg-slate-800 py-3 rounded-md text-white text-xl '>Create Item</button>
+            <button type='submit' className='bg-slate-800 py-3 rounded-md text-white text-xl'>Create Item</button>
         </form>
         </div>
     </section>

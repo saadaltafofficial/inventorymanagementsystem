@@ -25,24 +25,24 @@ export default function Header() {
   }
 
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white fixed w-full top-0 left-0">
+    <header className="flex items-center justify-between bg-gray-800 text-white p-4 fixed w-full top-0 left-0">
       <Link to={'/'} className="font-bold text-xl">Inventory Management System</Link>
       {isMenuOpen ?
         <button
-          className="desktop:hidden flex items-center p-2 text-white bg-gray-900 rounded-full"
+          className="desktop:hidden flex items-center justify-center text-white bg-gray-700 rounded-full"
           onClick={toggleMenu}
         >
-          <IoCloseOutline size={24} />
+          <IoCloseOutline size={34} />
         </button> :
         <button
-          className="desktop:hidden flex items-center py-2 rounded text-white bg-gray-800 hover"
+          className="desktop:hidden flex items-center justify-center text-white bg-gray-800"
           onClick={toggleMenu}
         >
-          <IoIosMenu size={24} />
+          <IoIosMenu size={34} />
         </button>}
       <div
         className={`${isMenuOpen ? "block w-full" : "hidden"
-          } fixed top-16 right-0 bg-gray-800 desktop:flex desktop:static desktop:gap-4`}
+          } fixed top-[4rem] right-0 bg-gray-800 desktop:flex desktop:static desktop:gap-4`}
       >
         <a
           href="/allitems"

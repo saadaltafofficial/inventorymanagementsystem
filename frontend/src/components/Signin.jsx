@@ -88,10 +88,11 @@ export default function Signin() {
                     />
                 </div>
             ) : (
-                <section className="flex flex-col items-center justify-center space-y-4 h-screen">
+                <section className="flex flex-col items-center justify-center h-screen text-gray-800">
+                    <h1 className="mb-6 text-xl">Login to your account!</h1>
                     <form
                         onSubmit={handleSubmit}
-                        className="flex flex-col items-center justify-center space-y-4 font-[inter]"
+                        className="justify-center gap-4 font-[inter] max-w-[380px] w-full"
                     >
                         <label>
                             Email
@@ -102,7 +103,8 @@ export default function Signin() {
                                 onChange={handleChange}
                                 required
                                 id="email"
-                                className="border border-gray-400 rounded-md py-3 text-center block"
+                                placeholder="Enter email"
+                                className="border border-gray-400 rounded-md py-3 px-2 block w-full mb-4 outline-gray-700"
                             />
                         </label>
                         <label>
@@ -114,11 +116,12 @@ export default function Signin() {
                                 onChange={handleChange}
                                 required
                                 id="password"
-                                className="border border-gray-400 rounded-md py-3 text-center block"
+                                placeholder="Enter password"
+                                className="border border-gray-400 rounded-md py-3 px-2 block w-full mb-6 outline-gray-700"
                             />
                             {isMessageVisible ? "" : <span className="text-red-500 transition-all ease-in-out duration-300 mb-6 text-sm">{response}</span>}
                         </label>
-                        <button type="submit" className={`bg-gray-800 text-white  py-3 rounded-md w-full`}>Login</button>
+                        <button type="submit" className={`bg-gray-800 text-white py-3 rounded-md w-full`}>Login</button>
                     </form>
                 </section>
             )}
